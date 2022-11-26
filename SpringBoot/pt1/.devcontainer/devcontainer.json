@@ -1,0 +1,13 @@
+{
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+  "service": "web",
+  "workspaceFolder": "/code",
+  "extensions": [
+    "GitHub.copilot",
+    "vscjava.vscode-gradle",
+    "editorconfig.editorconfig",
+    "vscjava.vscode-java-pack",
+    "vscjava.vscode-lombok"
+  ],
+  "remoteUser": "root"
+}
