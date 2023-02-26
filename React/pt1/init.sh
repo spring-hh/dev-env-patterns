@@ -14,3 +14,12 @@ if [[ -d $PROJECT_NAME ]]; then
 fi
 
 docker-compose run web npx create-react-app $PROJECT_NAME --template typescript
+
+# if directory $PROJECT_NAME does not exist, then exit
+if [[ ! -d $PROJECT_NAME ]]; then
+  echo "Directory $PROJECT_NAME does not exist. Exiting..."
+  exit 1
+fi
+
+# copy the files from the materials directory to the project directory
+cp -r materials/. $PROJECT_NAME
