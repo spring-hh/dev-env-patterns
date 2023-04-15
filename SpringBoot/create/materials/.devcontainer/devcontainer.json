@@ -5,7 +5,13 @@
     "remoteUser": "root",
     "customizations": {
       "vscode": {
-        "extensions": ["github.copilot"]
+        "extensions": [
+          "GitHub.copilot",
+          "vscjava.vscode-gradle",
+          "editorconfig.editorconfig",
+          "vscjava.vscode-java-pack",
+          "vscjava.vscode-lombok"
+        ]
       }
     }
 }
