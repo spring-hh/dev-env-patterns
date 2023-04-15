@@ -1,0 +1,4 @@
+FROM tomcat:10.1.1-jdk17
+WORKDIR /code
+COPY . .
+EXPOSE 8080

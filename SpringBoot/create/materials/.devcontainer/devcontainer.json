@@ -1,0 +1,11 @@
+{
+    "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+    "service": "web",
+    "workspaceFolder": "/code",
+    "remoteUser": "root",
+    "customizations": {
+      "vscode": {
+        "extensions": ["github.copilot"]
+      }
+    }
+}
