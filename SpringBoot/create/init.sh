@@ -14,7 +14,7 @@ if [[ -d $PROJECT_NAME ]]; then
 fi
 
 mkdir $PROJECT_NAME
-docker-compose run web bash -c "source /root/.sdkman/bin/sdkman-init.sh && spring init --build=gradle --boot-version=2.7.6 --java-version=17 --dependencies=web,security,thymeleaf,devtools --packaging=war --type=gradle-project"
+docker-compose run web bash -c "source /root/.sdkman/bin/sdkman-init.sh && spring init --build=gradle --boot-version=3.1.1 --java-version=17 --dependencies=web,security,thymeleaf,devtools --packaging=war --type=gradle-project"
 mv demo.zip $PROJECT_NAME
 
 # if directory $PROJECT_NAME does not exist, then exit
