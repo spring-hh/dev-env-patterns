@@ -12,7 +12,7 @@ if [[ -d $PROJECT_NAME ]]; then
   echo "Directory $PROJECT_NAME already exists. Exiting..."
   exit 1
 fi
-
+docker-compose build
 docker-compose run web django-admin startproject $PROJECT_NAME
 
 # if directory $PROJECT_NAME does not exist, then exit
