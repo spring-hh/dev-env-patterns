@@ -14,6 +14,7 @@ if [[ -d $PROJECT_NAME ]]; then
 fi
 
 mkdir $PROJECT_NAME
+docker-compose build
 docker-compose run web bash -c "source /root/.sdkman/bin/sdkman-init.sh && spring init --build=gradle --boot-version=3.1.1 --java-version=17 --dependencies=web,security,thymeleaf,devtools --packaging=war --type=gradle-project"
 mv demo.zip $PROJECT_NAME
 
@@ -25,3 +26,6 @@ fi
 
 # copy the files from the materials directory to the project directory
 cp -r materials/. $PROJECT_NAME
+cd $PROJECT_NAME
+unzip demo.zip
+rm -rf demo.zip
