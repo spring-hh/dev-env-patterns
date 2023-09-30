@@ -12,7 +12,7 @@ if [[ -d $PROJECT_NAME ]]; then
   echo "Directory $PROJECT_NAME already exists. Exiting..."
   exit 1
 fi
-
+docker-compose build
 docker-compose run web npx create-react-app $PROJECT_NAME --template typescript
 
 # if directory $PROJECT_NAME does not exist, then exit
