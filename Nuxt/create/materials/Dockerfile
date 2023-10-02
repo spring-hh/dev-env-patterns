@@ -1,0 +1,5 @@
+FROM node:20
+WORKDIR /code
+COPY . .
+
+EXPOSE 3000
