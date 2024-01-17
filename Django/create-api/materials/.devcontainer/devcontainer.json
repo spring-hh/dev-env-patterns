@@ -8,7 +8,9 @@
         "extensions": [
           "GitHub.copilot",
           "editorconfig.editorconfig",
-          "ms-python.python"
+          "ms-python.python",
+          "humao.rest-client",
+          "cweijan.vscode-database-client2"
         ]
       }
     }
