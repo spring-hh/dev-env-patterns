@@ -5,16 +5,98 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Django",
+            "name": "runserver",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "runserver",
-                "0.0.0.0:8000"
+                "0.0.0.0:8000",
+                "--settings=app.settings"
             ],
             "django": true,
             "justMyCode": true
-        }
+        },
+        // makemigrations
+        {
+            "name": "makemigrations",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "makemigrations",
+                "--settings=app.settings"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        // migrate
+        {
+            "name": "migrate",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "migrate",
+                "--settings=app.settings"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        // createsuperuser
+        {
+            "name": "createsuperuser",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "createsuperuser",
+                "--settings=app.settings"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Gunicorn",
+            "type": "python",
+            "request": "launch",
+            "program": "/usr/local/bin/gunicorn", // 仮想環境内のgunicornのパスを指定
+            "args": [
+                "--workers=3", // ワーカーの数、必要に応じて変更してください
+                "--bind",
+                "0.0.0.0:8000",
+                "app.wsgi:application", // 'app'はDjangoプロジェクト名に置き換えてください
+                "--env", 
+                "DJANGO_SETTINGS_MODULE=app.settings" // 環境変数として設定を渡す
+            ],
+            "console": "integratedTerminal"
+        },
+        // collectstatic
+        {
+            "name": "collectstatic",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "collectstatic",
+                "--noinput",
+                "--settings=app.settings"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        // unit test
+        {
+            "name": "unit test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "test",
+                "--settings=app.settings"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
     ]
 }
