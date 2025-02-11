@@ -6,13 +6,13 @@
     "configurations": [
         {
             "name": "runserver",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "runserver",
                 "0.0.0.0:8000",
-                "--settings=app.settings"
+                "--settings=config.settings"
             ],
             "django": true,
             "justMyCode": true
@@ -20,12 +20,12 @@
         // makemigrations
         {
             "name": "makemigrations",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "makemigrations",
-                "--settings=app.settings"
+                "--settings=config.settings"
             ],
             "django": true,
             "justMyCode": true
@@ -33,12 +33,12 @@
         // migrate
         {
             "name": "migrate",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "migrate",
-                "--settings=app.settings"
+                "--settings=config.settings"
             ],
             "django": true,
             "justMyCode": true
@@ -46,26 +46,12 @@
         // createsuperuser
         {
             "name": "createsuperuser",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "createsuperuser",
-                "--settings=app.settings"
-            ],
-            "django": true,
-            "justMyCode": true
-        },
-        // collectstatic
-        {
-            "name": "collectstatic",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/manage.py",
-            "args": [
-                "collectstatic",
-                "--noinput",
-                "--settings=app.settings"
+                "--settings=config.settings"
             ],
             "django": true,
             "justMyCode": true

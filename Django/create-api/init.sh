@@ -25,3 +25,6 @@ fi
 
 # copy the files from the materials directory to the project directory
 cp -r materials/. $PROJECT_NAME
+
+# replace config.settings with $PROJECT_NAME.settings in launch.json
+sed -i '' "s/config\.settings/$PROJECT_NAME.settings/g" $PROJECT_NAME/.vscode/launch.json
