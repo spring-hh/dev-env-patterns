@@ -1,0 +1,11 @@
+# すべてのファイルを除外
+*
+
+# 管理対象のファイルとディレクトリを指定
+!.gitignore
+!Dockerfile
+!docker-compose.yml
+!init.sh
+!requirements.txt
+!materials/
+!materials/**/*

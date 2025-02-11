@@ -12,8 +12,10 @@ if [[ -d $PROJECT_NAME ]]; then
   echo "Directory $PROJECT_NAME already exists. Exiting..."
   exit 1
 fi
+
+# Add --remove-orphans flag to remove orphaned containers
 docker-compose build
-docker-compose run web django-admin startproject $PROJECT_NAME
+docker-compose run --remove-orphans web django-admin startproject $PROJECT_NAME
 
 # if directory $PROJECT_NAME does not exist, then exit
 if [[ ! -d $PROJECT_NAME ]]; then
