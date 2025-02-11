@@ -1,5 +1,5 @@
 {
-    "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+    "dockerComposeFile": "compose.yml",
     "service": "web",
     "workspaceFolder": "/code",
     "remoteUser": "root",
@@ -10,7 +10,9 @@
           "editorconfig.editorconfig",
           "ms-python.python",
           "humao.rest-client",
-          "cweijan.vscode-database-client2"
+          "cweijan.vscode-database-client2",
+          "ms-ceintl.vscode-language-pack-ja",
+          "ms-python.debugpy"
         ]
       }
     }

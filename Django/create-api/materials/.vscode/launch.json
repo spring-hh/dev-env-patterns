@@ -56,21 +56,6 @@
             "django": true,
             "justMyCode": true
         },
-        {
-            "name": "Gunicorn",
-            "type": "python",
-            "request": "launch",
-            "program": "/usr/local/bin/gunicorn", // 仮想環境内のgunicornのパスを指定
-            "args": [
-                "--workers=3", // ワーカーの数、必要に応じて変更してください
-                "--bind",
-                "0.0.0.0:8000",
-                "app.wsgi:application", // 'app'はDjangoプロジェクト名に置き換えてください
-                "--env", 
-                "DJANGO_SETTINGS_MODULE=app.settings" // 環境変数として設定を渡す
-            ],
-            "console": "integratedTerminal"
-        },
         // collectstatic
         {
             "name": "collectstatic",
@@ -80,19 +65,6 @@
             "args": [
                 "collectstatic",
                 "--noinput",
-                "--settings=app.settings"
-            ],
-            "django": true,
-            "justMyCode": true
-        },
-        // unit test
-        {
-            "name": "unit test",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/manage.py",
-            "args": [
-                "test",
                 "--settings=app.settings"
             ],
             "django": true,

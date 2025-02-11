@@ -4,7 +4,7 @@
 if [[ -n $1 ]]; then
   PROJECT_NAME=$1
 else
-  PROJECT_NAME="app"
+  PROJECT_NAME="config"
 fi
 
 # if directory $PROJECT_NAME exists, then exit

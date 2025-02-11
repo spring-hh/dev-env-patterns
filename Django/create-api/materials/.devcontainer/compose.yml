@@ -1,0 +1,22 @@
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    command: sleep infinity
+    volumes:
+      - ..:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: analyze
+      POSTGRES_PASSWORD: analyze
+      POSTGRES_DB: analyze
+    ports:
+      - 5432:5432
+    volumes:
+      - ../tmp:/var/lib/postgresql/data/
